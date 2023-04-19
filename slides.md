@@ -137,23 +137,46 @@ Show how the models are built, and how it processes the data every day, maybe gi
 
 ---
 
-```python
-def sbert_embed(texts):
-    clean = [clean_text(text) for text in texts]
-    return ASSETS["SBERT"].encode(clean, device=DEVICE, show_progress_bar=False)
-```
+- Each of the aforementioned dimensions translates to a simple text classification problem 
+- Supervised learning: a training set of pairs (text, relevant/irrelevant)
+- We train a simple feedforward neural network with input representation from sentence transformers (e.g., Bert, Universal Sentence Encoders, etc...)
+
+![bg right](figures/ff-network.jpg)
 
 ---
 
-- Something about how preprocessing/best effort anonymization is enough
+### <!-- fit --> **Topic classification for customer feedbacks**
+
+- Find extra (textual) features such as the URL of the page on which the customer wrote their feedback
+- Preprocess the URL and embed it
+![bg left](figures/two-inputs.jpg)
 
 ---
 
-something about the cloud setup; reflect on full-stack ML work 
+### **Transfer learning**
+- We have different models for different teams
+- Each team define their own categories, but those overlap
+- This can be exploited by simply initializing the model weights in model B using weights from model A
+![bg right](figures/transfer.jpg)
+
+---
+## <!-- fit --> **Building the model is only one piece of the puzzle, though**
+- Text preprocessing is a must regardless of how good your embeddings are
+- For example, anonymization: no consumer data should leak into training data
+## **Look at your data, again and again** 🧐
 
 ---
 
-something about the temakategorisering, two inputs (sted), starting with pre-initialized weights from similar models
+### <!-- fit -->  **But how do we serve these models?**
+
+- REST API in a microservice 
+- Scheduled tasks: fetch the data every day/week/month, score it and write it back
+
+### <!-- fit --> **More about this in _The world beyond_**
+![bg right](figures/cloud.gif)
+
+
+
 
 ---
 <!-- _class: invert -->
@@ -164,12 +187,50 @@ something about the temakategorisering, two inputs (sted), starting with pre-ini
 On weak supervision
 -->
 
-![bg right](figures/small.gif)
+![bg right](figures/little-bit.gif)
 
 ---
 
-- ... but we didnt have a lot of data
-- show what we did with weak supervision for clarity and impudence
+### **We need classification models for clarity and impudence**
+... but we didn't have a lot of data
+
+Instead of asking the domain experts to annotate more data, can we pick their brains about how they would annotate the data and use that expertise somehow?
+
+---
+
+### Enters:
+### <!--fit --> **Weak Supervision!**
+
+- (Re)use existing sentiment dataset to create new datasets for clarity and impudence
+- Translate their expertise to labelling functions to produce so-called silver data $(𝑋,\widetilde Y)$
+
+--- 
+🤿
+Such functions can be as simple as:
+
+```python
+def lf_ short_message_positive(x):
+    if len(x.doc) < 5 and ×. sentiment_ score < 0.4:
+        return 0
+    return -1
+def lf_contains_one_strong_and_negative(x):
+    if x. sentiment_score >= 0.5 and contains_word(x. doc, ASSETS ["'UNCLARITY"] ["strong"]) :
+        return 1
+    return -1
+def lf_six_and_positive(x):
+    if x. sentiment score < 0.5 and ×[dice_ col_unc] == 6:
+        return 0
+    return -1
+```
+
+<!-- 
+- if the text includes a word that strongly indicate unclarity 
+- the sentiment score of the text
+- the dice score 
+- message length
+-->
+The outputs of these labels functions are then combined either through an ML model or a simply majority vote
+
 
 
 ---
