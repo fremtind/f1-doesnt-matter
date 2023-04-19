@@ -119,6 +119,10 @@ def sbert_embed(texts):
 something about the cloud setup
 
 ---
+
+something about the temakategorisering, two inputs (sted), starting with pre-initialized weights from similar models
+
+---
 <!-- _class: invert -->
 # **Make the most of small data**
 🤬 **Or: nobody is going to like you if you constantly ask people to annotate data for you**
@@ -148,15 +152,21 @@ I dont remember what we talked about
 
 ---
 
-no point in eg spending a lot of resources and time on fine-tuning a bert, if vanilla works well enough
+- no point in eg spending a lot of resources and time on fine-tuning a bert, if vanilla works well enough
+
+- hp tuning is a waste of time if you don't like what comes out of the model
+
+- simple/fast/not clunky is almost always more valuable than a few percentage points
 
 ---
 
 The "feel" of the delivered model is more important -- eg sometimes overfitting on shorter/longer messages might give better (F1) and more pedantically/technically better results, but the colleagues on the receiving end might want to see variety
 
 ---
+The tradeoffs between P and R are often essential, something something FBeta
 
-The tradeoffs between P and R are often essentials, something something FBeta
+---
+Often a bad model is better than no model at all (for example if false positives don't matter, think few shot object class with marius)
 
 ---
 <!-- _class: invert -->
@@ -170,7 +180,35 @@ streamlit
 ![bg right](figures/art.gif)
 
 ---
-alt-tab to a Cura demo
+- mention streamlit & gradio, recommend for portfolio building
+- alt-tab to a Cura demo
+
+---
+<!-- _class: invert -->
+# **Model management is hard**
+🎨 **Don't do it (yourself)**
+
+<!-- 
+mlflow
+-->
+
+![bg right](figures/findyou.gif)
 
 ---
 
+- You end up with a bunch of models, evaluation residuals, test sets and so on
+- show mlflow
+
+---
+<!-- _class: invert -->
+# **Being cool always beats raw technical prowess**
+🤝 **Or: be a bud**
+
+
+![bg right](figures/better.gif)
+
+---
+
+- reflections on the fact that an incredible engineer who is toxic can ruin a team
+- anectodes on Taraka and that JP guy at Kindly
+- NLP is hard, and more people without an NLP background like you want to do NLP work. There is a lot of value in spreading/teaching NLP in the industry. We try to do it like this and that
