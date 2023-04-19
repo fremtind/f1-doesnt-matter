@@ -93,7 +93,7 @@ Here we just introduce the task/problem and its nuances
 
 ---
 
-**Customer surveys** are an important tool to improve processes in most product companies. At Fremtind, customers have the opportunity to give us written feedbacks at different steps of their journey: as they **use** our systems to purchase new insurances, **update/upgrade/review** their coverage, and, perhaps most interestingly for our business, **after a claim has been approved or rejected** (some 50K a year.)
+**Customer surveys** are an important tool to improve processes in most product companies. At Fremtind, customers have the opportunity to give us written feedbacks at different steps of their journey: as they **purchase** new insurances, **update/upgrade/review** their coverage, and, perhaps most interestingly for our business, **after a claim has been approved or rejected** (some 50K a year.)
 
 ![bg left](figures/pitchfork.png)
 
@@ -205,7 +205,7 @@ the right uses focal cross-entropy
 
 ---
 
-### Qualitative analysis is as important as quantitative scores
+### <!-- fit --> Qualitative analysis is as important as quantitative scores
  <!--Back in the "olden" days, we were using a recurrent neural network to classify 
  feedback messages into positive and negative labels; the model was quite good
  but it was clear that the model was using the message length indirectly as a 
@@ -213,19 +213,25 @@ the right uses focal cross-entropy
 - Short feedback messages tend to be positive, whereas longer ones fall more on the negative side
 - A recurrent neural network could learn that
 - Would the model output still be interesting? Depends on how it will be used 
-- We need to think about the consumers of the model output
+## **Think about the consumers of the model output** 🛍️
 
 ---
-#### How about hyperparameter tuning?
-- Simplicity, efficiency vs 
+#### <!-- fit --> How about hyperparameter tuning?
+<!-- another way in which F1 doesn't matter if it costs a lot to get 
+obsessed with pushing it further-->
+- Simplicity, efficiency vs improving F1 by 0.1 
 - no point in eg spending a lot of resources and time on fine-tuning a bert, if vanilla works well enough
 - hp tuning is a waste of time if you don't like what comes out of the model
-- simple/fast/not clunky is almost always more valuable than a few percentage points
+
+#### <!-- fit --> **Simple/fast/not clunky is almost always more valuable than a few percentage points** 💰
 
 
 ---
-- The tradeoffs between P and R are often essential, something something FBeta
-- Often a bad model is better than no model at all (for example if false positives don't matter, think few shot object class with marius)
+## Tradeoffs of the trade 
+- Precision vs. recall
+- FBeta
+- Sometimes a bad model is better than no model at all 
+- If false positives don't matter, think few shot object class with marius
 
 ---
 <!-- _class: invert -->
