@@ -89,7 +89,7 @@ This one is interactive: how would you go about solving this problem?
 Here we just introduce the task/problem and its nuances
 -->
 
-![bg right 110%](figures/customer.gif)
+![bg right 120%](figures/customer.gif)
 
 ---
 
@@ -120,7 +120,7 @@ For (1), there is just not much we can do to improve: the damage is either cover
 
 # Feedback Loops
 
-In this project, we annotate customer communication from a variety of sources with the degree to which they pertain different (relevant) aspects of communication. This enables our (hundreds of) colleagues to **read more relevant messages** and use **text scores as quantities for their KPIs**.
+In this project, we score customer communication from a variety of sources with the degree to which they pertain different (relevant) aspects of communication. This enables our (hundreds of) colleagues to **read more relevant messages** and use **text scores as quantities for their KPIs**.
 
 ![bg left](figures/dimensions.jpg)
 
