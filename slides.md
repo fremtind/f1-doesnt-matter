@@ -89,19 +89,40 @@ This one is interactive: how would you go about solving this problem?
 Here we just introduce the task/problem and its nuances
 -->
 
-![bg right](figures/customer.gif)
+![bg right 110%](figures/customer.gif)
 
 ---
 
-- examples of uninteresting feedbacks with low terningkast and the converse
-- explain what we are interested in KPI-wise
-- 3 drivers: money, speed and communication
-- do something about communication
+**Customer surveys** are an important tool to improve processes in most product companies. At Fremtind, customers have the opportunity to give us written feedbacks at different steps of their journey: as they **use** our systems to purchase new insurances, **update/upgrade/review** their coverage, and, perhaps most interestingly for our business, **after a claim has been approved or rejected** (some 50K a year.)
+
+![bg left](figures/pitchfork.png)
 
 ---
 
-- reflect on the interesting nuances of communication aspects: this is more complicated than vanilla sentiment analysis
-- throw in product relevance too why not
+"Vanilla" sentiment analysis is not necessarily useful to analyze and extract value from these written messages: Most feedbacks come pre-equipped with a 🎲 or a 👍/👎.
+
+At the same time, these user generated scoring systems are useful to take the general temperature of customer satisfaction, but fall short at providing a ranking of feedbacks that are relevant to address different business problems.
+
+# <!-- fit --> So how can we use customer feedback to improve customer satisfaction?
+
+---
+
+## Facts:
+There are 3 key drivers for CS in insurance: (1) being payed, (2) being payed quickly, (3) clarity and respect in the claim process.
+
+For (1), there is just not much we can do to improve: the damage is either covered or it isn't. For (2), well, we know. We either hire more temps in dire times, or some people are just going to have to be patient.
+
+#### For **(3)**, we decided that absolutely all customers should be met with clear language and a high level of empathy and understanding.
+
+##### **The degrees to which a given message is about unclear language, or whether the customer was met with impatience and/or antagonism become interesting dimensions.**
+
+---
+
+# Feedback Loops
+
+In this project, we annotate customer communication from a variety of sources with the degree to which they pertain different (relevant) aspects of communication. This enables our (hundreds of) colleagues to **read more relevant messages** and use **text scores as quantities for their KPIs**.
+
+![bg left](figures/dimensions.jpg)
 
 ---
 <!-- _class: invert -->
