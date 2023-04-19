@@ -164,15 +164,43 @@ I dont remember what we talked about
 
 ---
 
-- no point in eg spending a lot of resources and time on fine-tuning a bert, if vanilla works well enough
+- F1 _does_ matter, but it is not the only metric we consider
+- What is a _good_ model? 
+- What is good enough when we are limited by time and resources?
 
-- hp tuning is a waste of time if you don't like what comes out of the model
+---
+<!-- The figures show the distribution of the scores of two models on a binary 
+classification problem; the two models have the exact same F1 score on the test
+set, which model is better?   -->
 
-- simple/fast/not clunky is almost always more valuable than a few percentage points
+![bg 90%](figures/nofocal.png)
+![bg 90%](figures/focal.png)
+
+<!--When you need a ranked list, the model to the left is almost of no use
+In practical terms, the only difference between these two models is the loss
+function; the one to the left uses binary cross-entropy whereas the the one to
+the right uses focal cross-entropy 
+(Focal loss applies a "focal factor to down-weight easy examples and focus more on hard examples)"-->
 
 ---
 
-The "feel" of the delivered model is more important -- eg sometimes overfitting on shorter/longer messages might give better (F1) and more pedantically/technically better results, but the colleagues on the receiving end might want to see variety
+### Qualitative analysis is as important as quantitative scores
+ <!--Back in the "olden" days, we were using a recurrent neural network to classify 
+ feedback messages into positive and negative labels; the model was quite good
+ but it was clear that the model was using the message length indirectly as a 
+ feature (because of fixed-length sequences and padding) -->
+- Short feedback messages tend to be positive, whereas longer ones fall more on the negative side
+- A recurrent neural network could learn that
+- Would the model output still be interesting? Depends on how it will be used 
+- We need to think about the consumers of the model output
+
+---
+#### How about hyperparameter tuning?
+- Simplicity, efficiency vs 
+- no point in eg spending a lot of resources and time on fine-tuning a bert, if vanilla works well enough
+- hp tuning is a waste of time if you don't like what comes out of the model
+- simple/fast/not clunky is almost always more valuable than a few percentage points
+
 
 ---
 - The tradeoffs between P and R are often essential, something something FBeta
