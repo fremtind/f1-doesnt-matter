@@ -70,9 +70,21 @@ This one is interactive: how would you go about solving this problem?
 
 ---
 <!-- _class: invert -->
+# **Embed, reduce, scatter**
+🗺️ **something something**
+
+
+![bg right](figures/scatter.gif)
+
+---
+
+- scatter example
+
+---
+<!-- _class: invert -->
 # **On customer satisfaction and feedback**
 # <!-- fit -->  😱 Or: Not all bad feedback is interesting
-
+<!-- joint work -->
 <!-- 
 Here we just introduce the task/problem and its nuances
 -->
@@ -95,9 +107,9 @@ Here we just introduce the task/problem and its nuances
 <!-- _class: invert -->
 # **A simple model is enough**
 😎 **Or: how I learned how to stop worrying and just throw some pretrained embeddings at a dense layer**
-
+<!-- joint work -->
 <!-- 
-Show how the model is built, and how it processes the data every day, maybe give a high-level idea of how AWS is set up
+Show how the models are built, and how it processes the data every day, maybe give a high-level idea of how AWS is set up
 -->
 
 ![bg right](figures/natural.gif)
@@ -116,7 +128,7 @@ def sbert_embed(texts):
 
 ---
 
-something about the cloud setup
+something about the cloud setup; reflect on full-stack ML work 
 
 ---
 
@@ -126,7 +138,7 @@ something about the temakategorisering, two inputs (sted), starting with pre-ini
 <!-- _class: invert -->
 # **Make the most of small data**
 🤬 **Or: nobody is going to like you if you constantly ask people to annotate data for you**
-
+<!-- joint work -->
 <!-- 
 On weak supervision
 -->
@@ -143,7 +155,7 @@ On weak supervision
 <!-- _class: invert -->
 # **F1 doesn't matter**
 💖 **Or: does it spark joy?**
-
+<!-- joint work -->
 <!-- 
 I dont remember what we talked about
 -->
@@ -163,10 +175,8 @@ I dont remember what we talked about
 The "feel" of the delivered model is more important -- eg sometimes overfitting on shorter/longer messages might give better (F1) and more pedantically/technically better results, but the colleagues on the receiving end might want to see variety
 
 ---
-The tradeoffs between P and R are often essential, something something FBeta
-
----
-Often a bad model is better than no model at all (for example if false positives don't matter, think few shot object class with marius)
+- The tradeoffs between P and R are often essential, something something FBeta
+- Often a bad model is better than no model at all (for example if false positives don't matter, think few shot object class with marius)
 
 ---
 <!-- _class: invert -->
@@ -198,6 +208,24 @@ mlflow
 
 - You end up with a bunch of models, evaluation residuals, test sets and so on
 - show mlflow
+
+
+---
+<!-- _class: invert -->
+# **The world beyond NLP and deep learning**
+🚪 **something tabular data**
+
+
+![bg right](figures/stranger.gif)
+
+
+---
+
+- lightgbm, pandas profiler, pandas_dq
+- fraud
+- churn 
+- databases 
+
 
 ---
 <!-- _class: invert -->
