@@ -108,7 +108,7 @@ At the same time, these user generated scoring systems are useful to take the ge
 ---
 
 ## Facts:
-There are 3 key drivers for CS in insurance: (1) being payed, (2) being payed quickly, (3) clarity and respect in the claim process.
+There are 3 key drivers for CS in insurance: (1) being paid, (2) being paid quickly, (3) clarity and respect in the claim process.
 
 For (1), there is just not much we can do to improve: the damage is either covered or it isn't. For (2), well, we know. We either hire more temps in dire times, or some people are just going to have to be patient.
 
