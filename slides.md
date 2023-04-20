@@ -237,9 +237,10 @@ Instead of asking the domain experts to annotate more data, can we pick their br
 
 #### _Thank god for_
 ### <!--fit --> **Weak Supervision!**
-
 - (Re)use existing sentiment dataset to create new datasets for clarity and impudence
 - Translate their expertise to labelling functions to produce so-called silver data $(𝑋,\widetilde Y)$
+
+![bg right](figures/ws.jpg)
 
 --- 
 🤿
@@ -375,7 +376,7 @@ We use `https://github.com/mlflow/mlflow/`
 ---
 <!-- _class: invert -->
 # **The world beyond NLP and deep learning**
-🚪 **something tabular data**
+🚪 **Tabular data **
 
 
 ![bg right](figures/stranger.gif)
