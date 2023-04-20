@@ -212,9 +212,6 @@ Show how the models are built, and how it processes the data every day, maybe gi
 ### <!-- fit --> **More about this in _The world beyond_**
 ![bg left](figures/cloud.gif)
 
-
-
-
 ---
 <!-- _class: invert -->
 # **Make the most of small data**
@@ -285,7 +282,7 @@ I dont remember what we talked about
 ---
 
 - F1 _does_ matter, but it is not the only metric we consider
-- What is a _good_ model? 
+- What is a _good_ model, anyway?
 - What is good enough when we are limited by time and resources?
 
 ---
@@ -376,19 +373,23 @@ We use `https://github.com/mlflow/mlflow/`
 ---
 <!-- _class: invert -->
 # **The world beyond NLP and deep learning**
-🚪 **Tabular data **
-
+🚪 **Tabular data, for example**
 
 ![bg right](figures/stranger.gif)
-
 
 ---
 
 - lightgbm, pandas profiler, pandas_dq
 - fraud
 - churn 
-- databases 
+- databases
 
+---
+###  Making the world go round is an art in itself 🌎
+
+![height:400](figures/uml.jpg)
+
+Some call it "MLOPS"
 
 ---
 <!-- _class: invert -->
