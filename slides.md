@@ -28,14 +28,26 @@ size: 16:9
 
 - One of Norway's leading insurance companies, owned by SB1 and DNB
 - Data is at the core of most insurance processes
-- Something something
 
 ![bg right 60%](figures/fremtind-logo.png)
 
 ---
 ## 📝 Coming up in this talk
 
-Talk outline
+```
+~/talks/f1-doesnt-matter  main ✔                                                   0m
+▶ cat slides.md | grep "^# \*\*"
+# **Quick NLP hacks can have a big impact**
+# **Visualize all the things**
+# **On customer satisfaction and feedback**
+# **A simple model is enough**
+# **Make the most of small data**
+# **F1 doesn't matter**
+# **Budget UI is better than no UI**
+# **Model management is hard**
+# **The world beyond NLP and deep learning**
+# **Being cool always beats raw technical prowess**
+```
 
 ---
 <!-- _class: invert -->
@@ -187,17 +199,18 @@ Show how the models are built, and how it processes the data every day, maybe gi
 ## <!-- fit --> **Building the model is only one piece of the puzzle, though**
 - Text preprocessing is a must regardless of how good your embeddings are
 - For example, anonymization: no consumer data should leak into training data
-## **Look at your data, again and again** 🧐
+## Look at your data, again and again 🧐
+→ Don't sleep on embed/reduce/scatter!
 
 ---
 
-### <!-- fit -->  **But how do we serve these models?**
+#  **Serving the models**
 
 - REST API in a microservice 
 - Scheduled tasks: fetch the data every day/week/month, score it and write it back
 
 ### <!-- fit --> **More about this in _The world beyond_**
-![bg right](figures/cloud.gif)
+![bg left](figures/cloud.gif)
 
 
 
@@ -222,7 +235,7 @@ Instead of asking the domain experts to annotate more data, can we pick their br
 
 ---
 
-### Enters:
+#### _Thank god for_
 ### <!--fit --> **Weak Supervision!**
 
 - (Re)use existing sentiment dataset to create new datasets for clarity and impudence
@@ -316,7 +329,7 @@ obsessed with pushing it further-->
 - Precision and/or recall, at thresholds!
 - FBeta
 - Sometimes a bad model is better than no model at all 
-- If false positives don't matter, think few shot object class with marius
+- Can we tweak the system implementation so that false positives don't matter as much?
 
 ---
 <!-- _class: invert -->
@@ -330,8 +343,14 @@ streamlit
 ![bg right](figures/art.gif)
 
 ---
-- mention streamlit & gradio, recommend for portfolio building
-- alt-tab to a Cura demo
+
+🔥 **Hot take**
+
+# <!-- fit --> An interactive demo is worth more than a better model, 100 excel sheets or 1000 reports
+
+`https://streamlit.io/`
+
+→ cmd-tab to Cura
 
 ---
 <!-- _class: invert -->
@@ -345,10 +364,13 @@ mlflow
 ![bg right](figures/findyou.gif)
 
 ---
+Long story short: you gotta keep track of models, data, model versions, val/test splits, evaluation plots, comments, and more.
 
-- You end up with a bunch of models, evaluation residuals, test sets and so on
-- show mlflow
+# <!-- fit --> You are **not** going to be able to do it (well) for yourself, let alone a whole team
 
+We use `https://github.com/mlflow/mlflow/`
+
+→ cmd-tab to ml-flow
 
 ---
 <!-- _class: invert -->
@@ -377,6 +399,15 @@ mlflow
 
 ---
 
-- reflections on the fact that an incredible engineer who is toxic can ruin a team
-- anectodes on Taraka and that JP guy at Kindly
-- NLP is hard, and more people without an NLP background like you want to do NLP work. There is a lot of value in spreading/teaching NLP in the industry. We try to do it like this and that
+### Some things we have seen
+- Dropping model names like you are swapping pokemon cards
+- Gatekeeping and arrogance
+- Toxic code reviews
+- Now that every linkedin influencer is a chatGPT expert, it's easy to forget that NLP is hard.
+
+##### **Empathy and willingness to learn and share make more ML money than hard skills**
+
+![bg left](figures/check.gif)
+
+
+
