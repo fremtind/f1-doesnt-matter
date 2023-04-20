@@ -70,15 +70,39 @@ This one is interactive: how would you go about solving this problem?
 
 ---
 <!-- _class: invert -->
-# **Embed, reduce, scatter**
-🗺️ **something something**
+# **Visualize all the things**
+🗺️ **Seeing is believing**
 
 
 ![bg right](figures/scatter.gif)
 
 ---
 
-- scatter example
+- We work with a bunch of different datasets
+- Some neural representations might be better than other
+- Some might be cheaper
+- What's a representation anyway? It's important to "build trust" across teams and customers. "Seeing is believing"
+
+# <!-- fit -->🎨 One thing we do all the time: Embed, reduce, scatter
+
+---
+
+```python
+import altair as alt
+from umap import UMAP
+
+two_d = UMAP().fit_transform(df["embeddings"])
+df["x"], df["y"] = two_d[:, 0], two_d[:, 1]
+
+alt.Chart(df).mark_circle(size=60).encode(
+    x='x',
+    y='y',
+    tooltip=["text"]
+).properties(width=1000, height=500).interactive()
+
+```
+
+![bg right](figures/scatterplot.gif)
 
 ---
 <!-- _class: invert -->
@@ -277,7 +301,7 @@ the right uses focal cross-entropy
 ## **Think about the consumers of the model output** 🛍️
 
 ---
-#### <!-- fit --> How about hyperparameter tuning?
+#### <!-- fit --> Friends don't let friends obsess on hyperparameter tuning
 <!-- another way in which F1 doesn't matter if it costs a lot to get 
 obsessed with pushing it further-->
 - Simplicity, efficiency vs improving F1 by 0.1 
@@ -289,7 +313,7 @@ obsessed with pushing it further-->
 
 ---
 ## Tradeoffs of the trade 
-- Precision vs. recall
+- Precision and/or recall, at thresholds!
 - FBeta
 - Sometimes a bad model is better than no model at all 
 - If false positives don't matter, think few shot object class with marius
