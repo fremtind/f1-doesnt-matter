@@ -378,18 +378,23 @@ We use `https://github.com/mlflow/mlflow/`
 ![bg right](figures/stranger.gif)
 
 ---
+# 🧁 Muffins
 
-- lightgbm, pandas profiler, pandas_dq
-- fraud
-- churn 
-- databases
+- a system that produces a score to reflect 'problematic' customer profiles
+- Trained on e.g. fraud
+- Working with tabular data, gradient boosting and feature engineering is satisfying ✨
+- A viper's nest of potential ethical pitfalls; XAI is a **MUST**
+
+→ Check out: 
+`https://medium.com/fremtind/forsikring-og-muffens-fa2e8cfbca5b`
+`https://github.com/odaon/muffins-ai-motor`
 
 ---
-###  Making the world go round is an art in itself 🌎
+#  Putting a system in production is an art in itself 🌎
 
 ![height:400](figures/uml.jpg)
 
-Some call it "MLOPS"
+## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some call it **MLOPS**
 
 ---
 <!-- _class: invert -->
