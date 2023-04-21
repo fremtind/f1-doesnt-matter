@@ -154,9 +154,9 @@ For (1), there is just not much we can do to improve: the damage is either cover
 
 ---
 
-# Feedback Loops
+# 🧙‍♀️ Mana
 
-In this project, we score customer communication from a variety of sources with the degree to which they pertain different (relevant) aspects of communication. This enables our (hundreds of) colleagues to **read more relevant messages** and use **text scores as quantities for their KPIs**.
+In this project, we score customer feedback and other interactions from a variety of sources with the degree to which they pertain different (relevant) aspects of communication. This enables our (hundreds of) colleagues to **read more relevant messages** and use **text scores as quantities for their KPIs**.
 
 ![bg left](figures/dimensions.jpg)
 
@@ -209,7 +209,6 @@ Show how the models are built, and how it processes the data every day, maybe gi
 - REST API in a microservice 
 - Scheduled tasks: fetch the data every day/week/month, score it and write it back
 
-### <!-- fit --> **More about this in _The world beyond_**
 ![bg left](figures/cloud.gif)
 
 ---
@@ -225,10 +224,10 @@ On weak supervision
 
 ---
 
-### **We need classification models for clarity and impudence**
-... but we didn't have a lot of data
+## Problem: We need **classification** models for **clarity**
+... but we have no data
 
-Instead of asking the domain experts to annotate more data, can we pick their brains about how they would annotate the data and use that expertise somehow?
+Instead of asking people to annotate more data, can we pick their brains about how they would annotate the data and use that expertise somehow?
 
 ---
 
@@ -240,20 +239,19 @@ Instead of asking the domain experts to annotate more data, can we pick their br
 ![bg right](figures/ws.jpg)
 
 --- 
-🤿
-Such functions can be as simple as:
+# 🤿 Labeling  functions can be as simple as:
 
 ```python
 def lf_ short_message_positive(x):
-    if len(x.doc) < 5 and ×. sentiment_ score < 0.4:
+    if len(x.doc) < 5 and x.sentiment_score < 0.4:
         return 0
     return -1
 def lf_contains_one_strong_and_negative(x):
-    if x. sentiment_score >= 0.5 and contains_word(x. doc, ASSETS ["'UNCLARITY"] ["strong"]) :
+    if x.sentiment_score >= 0.5 and contains_word(x.doc, ASSETS["UNCLARITY"]["strong"]) :
         return 1
     return -1
 def lf_six_and_positive(x):
-    if x. sentiment score < 0.5 and ×[dice_ col_unc] == 6:
+    if x.sentiment_score < 0.5 and x[dice_col_unc] == 6:
         return 0
     return -1
 ```
@@ -263,19 +261,13 @@ def lf_six_and_positive(x):
 - the sentiment score of the text
 - the dice score 
 - message length
--->
 The outputs of these labels functions are then combined either through an ML model or a simply majority vote
-
-
+-->
 
 ---
 <!-- _class: invert -->
 # **F1 doesn't matter**
 💖 **Or: does it spark joy?**
-<!-- joint work -->
-<!-- 
-I dont remember what we talked about
--->
 
 ![bg right](figures/helpful.gif)
 
@@ -290,8 +282,8 @@ I dont remember what we talked about
 classification problem; the two models have the exact same F1 score on the test
 set, which model is better?   -->
 
-![bg 90%](figures/nofocal.png)
-![bg 90%](figures/focal.png)
+# **F1 doesn't matter**
+![width:2000](figures/2models.png)
 
 <!--When you need a ranked list, the model to the left is almost of no use
 In practical terms, the only difference between these two models is the loss
@@ -316,14 +308,13 @@ the right uses focal cross-entropy
 <!-- another way in which F1 doesn't matter if it costs a lot to get 
 obsessed with pushing it further-->
 - Simplicity, efficiency vs improving F1 by 0.1 
-- no point in eg spending a lot of resources and time on fine-tuning a bert, if vanilla works well enough
-- hp tuning is a waste of time if you don't like what comes out of the model
+- No point in e.g. spending a lot of resources and time on fine-tuning a Bert, if vanilla works well enough
+- Hp-tuning is a waste of time if you don't like what comes out of the model
 
 #### <!-- fit --> **Simple/fast/not clunky is almost always more valuable than a few percentage points** 💰
 
-
 ---
-## Tradeoffs of the trade 
+## 🛠️ Tradeoffs of the trade 
 - Precision and/or recall, at thresholds!
 - FBeta
 - Sometimes a bad model is better than no model at all 
@@ -380,10 +371,10 @@ We use `https://github.com/mlflow/mlflow/`
 ---
 # 🧁 Muffins
 
-- a system that produces a score to reflect 'problematic' customer profiles
+- A system that produces a score to reflect 'problematic' customer profiles
 - Trained on e.g. fraud
 - Working with tabular data, gradient boosting and feature engineering is satisfying ✨
-- A viper's nest of potential ethical pitfalls; XAI is a **MUST**
+- A viper's nest of potential ethical pitfalls; explainable AI is a **MUST**
 
 → Check out: 
 `https://medium.com/fremtind/forsikring-og-muffens-fa2e8cfbca5b`
@@ -394,7 +385,7 @@ We use `https://github.com/mlflow/mlflow/`
 
 ![height:400](figures/uml.jpg)
 
-## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some call it **MLOPS**
+## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some call it **MLOps**
 
 ---
 <!-- _class: invert -->
