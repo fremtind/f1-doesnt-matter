@@ -282,7 +282,7 @@ The outputs of these labels functions are then combined either through an ML mod
 classification problem; the two models have the exact same F1 score on the test
 set, which model is better?   -->
 
-# **F1 doesn't matter**
+# F1 **doesn't matter**
 ![width:2000](figures/2models.png)
 
 <!--When you need a ranked list, the model to the left is almost of no use
@@ -383,9 +383,9 @@ We use `https://github.com/mlflow/mlflow/`
 ---
 #  Putting a system in production is an art in itself 🌎
 
-![height:400](figures/uml.jpg)
+Some call it **MLOps**
 
-## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some call it **MLOps**
+![bg left](figures/uml.jpg)
 
 ---
 <!-- _class: invert -->
@@ -401,7 +401,7 @@ We use `https://github.com/mlflow/mlflow/`
 - Dropping model names like you are swapping pokemon cards
 - Gatekeeping and arrogance
 - Toxic code reviews
-- Now that every linkedin influencer is a chatGPT expert, it's easy to forget that NLP is hard.
+- Now that every linkedin influencer is a ChatGPT expert, it's easy to forget that NLP is hard.
 
 ##### **Empathy and willingness to learn and share make more ML money than hard skills**
 
