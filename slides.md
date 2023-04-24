@@ -81,7 +81,7 @@ size: 16:9
 
 ---
 - We work with a bunch of different datasets
-- Some neural representations might be better than other
+- Some neural representations might be better than others
 - Some might be cheaper
 - What's a representation anyway? It's important to "build trust" across teams and customers. "Seeing is believing"
 
