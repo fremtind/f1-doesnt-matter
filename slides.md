@@ -249,12 +249,12 @@ def lf_six_and_positive(x):
 ## **Think about the consumers of the model output** 🛍️
 
 ---
-#### <!-- fit --> Friends don't let friends obsess on hyperparameter tuning
+#### <!-- fit --> Friends don't let friends obsess on hyperparameter tuning 😵‍💫
 - Simplicity, efficiency vs improving F1 by 0.1 
 - No point in e.g. spending a lot of resources and time on fine-tuning a Bert, if vanilla works well enough
 - Hp-tuning is a waste of time if you don't like what comes out of the model
 
-#### <!-- fit --> **Simple/fast/not clunky is almost always more valuable than a few percentage points** 💰
+#### <!-- fit --> **Simple/fast/not clunky is often more valuable than a few percentage points** 💰
 
 ---
 ## 🛠️ Tradeoffs of the trade 
@@ -335,7 +335,7 @@ Some call it **MLOps**
 - Dropping model names like you are swapping pokemon cards
 - Gatekeeping and arrogance
 - Toxic code reviews
-- Now that every linkedin influencer is a ChatGPT expert, it's easy to forget that NLP is hard.
+- Now that every LinkedIn influencer is a ChatGPT expert, it's easy to forget that NLP is hard.
 
 ##### **Empathy and willingness to learn and share make more ML money than hard skills**
 
