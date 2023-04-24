@@ -233,7 +233,7 @@ def lf_six_and_positive(x):
 ![bg right](figures/helpful.gif)
 
 ---
-- F1 _does_ matter, but it is not the only metric we consider
+- Of course F1 and other metrics _do_ matter, but they are not the only thing we consider
 - What is a _good_ model, anyway?
 - What is good enough when we are limited by time and resources?
 
