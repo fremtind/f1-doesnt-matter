@@ -118,9 +118,9 @@ alt.Chart(df).mark_circle(size=60).encode(
 ![bg left](figures/pitchfork.png)
 
 ---
-"Vanilla" sentiment analysis is not necessarily useful to analyze and extract value from these written messages: Most feedbacks come pre-equipped with a 🎲 or a 👍/👎.
+"Vanilla" sentiment analysis is not necessarily useful to analyze and extract value from these written messages: Most messages come pre-equipped with a 🎲 or a 👍/👎.
 
-At the same time, these user generated scoring systems are useful to take the general temperature of customer satisfaction, but fall short at providing a ranking of feedbacks that are relevant to address different business problems.
+These user generated scoring systems are useful to take the general temperature of customer satisfaction, but fall short of providing a ranking of messages that are relevant to address different business problems.
 
 # <!-- fit --> So how can we use customer feedback to improve customer satisfaction?
 
