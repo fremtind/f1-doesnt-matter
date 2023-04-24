@@ -176,6 +176,7 @@ Show how the models are built, and how it processes the data every day, maybe gi
 - Each of the aforementioned dimensions translates to a simple text classification problem 
 - Supervised learning: a training set of pairs (text, relevant/irrelevant)
 - We train a simple feedforward neural network with input representation from sentence transformers (e.g., Bert, Universal Sentence Encoders, etc...)
+- Shoutout `https://huggingface.co/NbAiLab/nb-sbert-base`! 🙌
 
 ![bg right](figures/ff-network.jpg)
 
@@ -316,7 +317,6 @@ obsessed with pushing it further-->
 ---
 ## 🛠️ Tradeoffs of the trade 
 - Precision and/or recall, at thresholds!
-- FBeta
 - Sometimes a bad model is better than no model at all 
 - Can we tweak the system implementation so that false positives don't matter as much?
 
