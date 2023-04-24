@@ -209,14 +209,16 @@ Instead of asking people to annotate more data, can we pick their brains about h
 # 🤿 Labeling  functions can be as simple as:
 
 ```python
-def lf_ short_message_positive(x):
+def lf_short_message_positive(x):
     if len(x.doc) < 5 and x.sentiment_score < 0.4:
         return 0
     return -1
+
 def lf_contains_one_strong_and_negative(x):
     if x.sentiment_score >= 0.5 and contains_word(x.doc, ASSETS["UNCLARITY"]["strong"]) :
         return 1
     return -1
+
 def lf_six_and_positive(x):
     if x.sentiment_score < 0.5 and x[dice_col_unc] == 6:
         return 0
@@ -240,7 +242,7 @@ def lf_six_and_positive(x):
 ![width:2000](figures/2models.png)
 
 ---
-### <!-- fit --> Qualitative analysis is as important as quantitative scores
+### <!-- fit --> Qualitative is as important as quantitative 🍒
 - Short feedback messages tend to be positive, whereas longer ones fall more on the negative side
 - A recurrent neural network could learn that
 - Would the model output still be interesting? Depends on how it will be used 

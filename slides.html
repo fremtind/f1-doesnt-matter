@@ -180,14 +180,16 @@ alt.Chart(df).mark_circle(size=<span class="hljs-number">60</span>).encode(
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-paginate="true" data-marpit-pagination="24" data-marpit-pagination-total="41" style="" data-size="16:9" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-paginate="true" data-marpit-pagination="25" data-marpit-pagination-total="41" style="--paginate:true;" data-size="16:9">
 <h1 id="%F0%9F%A4%BF-labeling-functions-can-be-as-simple-as"><img class="emoji" draggable="false" alt="🤿" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f93f.svg" data-marp-twemoji=""/> Labeling  functions can be as simple as:</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">lf_</span> short_message_positive(x):
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">lf_short_message_positive</span>(<span class="hljs-params">x</span>):
     <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(x.doc) &lt; <span class="hljs-number">5</span> <span class="hljs-keyword">and</span> x.sentiment_score &lt; <span class="hljs-number">0.4</span>:
         <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
     <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>
+
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">lf_contains_one_strong_and_negative</span>(<span class="hljs-params">x</span>):
     <span class="hljs-keyword">if</span> x.sentiment_score &gt;= <span class="hljs-number">0.5</span> <span class="hljs-keyword">and</span> contains_word(x.doc, ASSETS[<span class="hljs-string">&quot;UNCLARITY&quot;</span>][<span class="hljs-string">&quot;strong&quot;</span>]) :
         <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
     <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>
+
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">lf_six_and_positive</span>(<span class="hljs-params">x</span>):
     <span class="hljs-keyword">if</span> x.sentiment_score &lt; <span class="hljs-number">0.5</span> <span class="hljs-keyword">and</span> x[dice_col_unc] == <span class="hljs-number">6</span>:
         <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
@@ -210,7 +212,7 @@ alt.Chart(df).mark_circle(size=<span class="hljs-number">60</span>).encode(
 <p><img src="figures/2models.png" alt="" style="width:2000px;" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-paginate="true" data-marpit-pagination="29" data-marpit-pagination-total="41" style="--paginate:true;" data-size="16:9">
-<h3 is="marp-h3" data-auto-scaling id="qualitative-analysis-is-as-important-as-quantitative-scores"> Qualitative analysis is as important as quantitative scores</h3>
+<h3 is="marp-h3" data-auto-scaling id="qualitative-is-as-important-as-quantitative-%F0%9F%8D%92"> Qualitative is as important as quantitative <img class="emoji" draggable="false" alt="🍒" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f352.svg" data-marp-twemoji=""/></h3>
 <ul>
 <li>Short feedback messages tend to be positive, whereas longer ones fall more on the negative side</li>
 <li>A recurrent neural network could learn that</li>
