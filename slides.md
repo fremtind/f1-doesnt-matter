@@ -308,7 +308,7 @@ We use `https://github.com/mlflow/mlflow/`
 
 - A system that produces a score to reflect 'problematic' customer profiles
 - Trained on e.g. fraud
-- Working with tabular data, gradient boosting and feature engineering is satisfying ✨
+- Working with tabular data, **gradient boosting** and old-school feature engineering is satisfying ✨
 - A viper's nest of potential ethical pitfalls; explainable AI is a **MUST**
 
 → Check out: 
@@ -337,7 +337,7 @@ Some call it **MLOps**
 - Toxic code reviews
 - Now that every LinkedIn influencer is a ChatGPT expert, it's easy to forget that NLP is hard.
 
-##### **Empathy and willingness to learn and share make more ML money than hard skills**
+##### **Empathy and willingness to learn and share are extremely valuable, both on a human and on a financial level** 💖
 
 ![bg left](figures/check.gif)
 
