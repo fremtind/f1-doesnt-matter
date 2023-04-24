@@ -260,6 +260,8 @@ def lf_six_and_positive(x):
 - Sometimes a bad model is better than no model at all 
 - Can we tweak the system implementation so that false positives don't matter as much?
 
+![bg left 70%](figures/other.jpg)
+
 ---
 <!-- _class: invert -->
 # **Budget UI is better than no UI**
