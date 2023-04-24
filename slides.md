@@ -407,5 +407,7 @@ Some call it **MLOps**
 
 ![bg left](figures/check.gif)
 
+---
 
-
+# Thank you!
+###  Questions?
